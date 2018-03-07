@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var list = { value: 1 };
+    list.next = { value: 2 };
+    list.next.next = { value: 3 };
+    list.next.next.next = { value: 4 };
+
+    function printList1(list) {
+        while(list) {
+            alert( list.value );
+            list = list.next;
+        }
+
+    }
+
+    function printList2(list) {
+        alert( list.value );
+        if (list.next) {
+            printList2(list.next);
+        }
+
+    }
+
+    function printList3(list) {
+        if (list.next) {
+            printList3(list.next);
+        }
+        alert( list.value );
+    }
+
+    function printList4(list) {
+        var arr = [];
+        while (list) {
+            arr.push(list.value);
+            list = list.next;
+        }
+        for (var i = arr.length - 1; i >= 0; i--) {
+            alert(arr[i]);
+        }
+    }
+
+    printList1(list);
+    printList2(list);
+    printList3(list);
+    printList4(list);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function unique(arr) {
+        var result = [];
+        label:
+            for (var i = 0; i < arr.length; i++) {
+                var str = arr[i];
+                for (var j = 0; j < result.length; j++) {
+                    if (result[j] == str) continue label;
+                }
+                result.push(str);
+            }
+        return result;
+    }
+    var strings = ["C++", "C#", "C++", "C#" , "C", "C++", "JavaScript", "C++", "JavaScript"];
+
+    alert(unique(strings));
+</script>
+</body>
+</html>

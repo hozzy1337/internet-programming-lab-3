@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"> </script>
+<script>
+    var vasya = { name: "Вася", age: 23 };
+    var masha = { name: "Маша", age: 18 };
+    var vovochka = { name: "Вовочка", age: 6 };
+    var people = [ vasya , masha , vovochka ];
+    people = _.sortBy(people, "age");
+    alert(people[0].age + " " + people[1].age + " " + people[2].age + " ");
+</script>
+</body>
+</html>

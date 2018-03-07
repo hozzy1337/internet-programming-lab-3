@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1, 2, 3, 4, 5]
+
+    function randomize(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            arr[i] = [arr[j], arr[j] = arr[i]][0];
+        }
+    }
+    randomize(arr);
+    alert(arr);
+</script>
+</body>
+</html>
